@@ -4,19 +4,22 @@ This project represents a basic Online Course Management System implemented usin
 ![alt text](DIAGRAM.png)
 ## OOP DESIGN:
 #### Abstraction
-Core operations like enroll, submitAssignment, and assignGrade are exposed clearly without showing internal mechanics.
+
+Core entities like User, Course, Assignment, and Grade are represented as classes with clear methods hiding internal complexity.
 
 #### Encapsulation
-Private variables like _score, _email use getter/setter methods to control access.
 
+Class properties such as email, ID, and scores are kept private or protected using prefixes and accessed through getters/setters, ensuring secure and controlled data access.
 #### Inheritance
-Student, Instructor, and Administrator inherit from User, reducing redundancy.
+
+Student, Instructor, and Administrator are subclasses of a generic User class, inheriting common functionality while adding role-specific behaviors .
 
 #### Polymorphism
-Role-specific methods like createCourse() and submitAssignment() are defined only in their respective subclasses.
+
+Methods like viewCourses() are overridden in each subclass to reflect role-specific views: students see enrolled courses, instructors see courses they teach.
 
 ## SOLID Principles Used:
-S: Each class (e.g., Assignment, Grade) has one responsibility.
+S: Each class has one responsibility.
 
 O: User is open for extension (subclasses) but closed for modification.
 
@@ -24,7 +27,7 @@ L: Student, Instructor, and Administrator can substitute User without issues.
 
 I: Students/Instructors only access functions they need; no large interfaces.
 
-D: Interactions like grading or announcements rely on abstracted objects (Grade, Announcement) passed into methods.
+D: Interactions like grading or announcements rely on abstracted objectspassed into methods.
 
 ## CODE
 ```
