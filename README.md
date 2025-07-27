@@ -163,7 +163,7 @@ class Grade {
 
 ```
 
-## Class Responsibilities
+## Class Roles
 User: Base class for authentication and role handling
 
 Student: Enrolls in courses, submits assignments, views grades
